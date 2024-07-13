@@ -4,7 +4,9 @@ import com.gustarodrigues.picpay.clients.NotifyClient;
 import com.gustarodrigues.picpay.entities.Transfer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class NotifyService {
 
     private static final Logger logger = LoggerFactory.getLogger(NotifyService.class);

@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(url = "client.authorize-service.url")
+@FeignClient(name = "AuthorizeClient",url = "${client.authorize-service.url}")
 public interface AuthorizeClient {
 
     @GetMapping

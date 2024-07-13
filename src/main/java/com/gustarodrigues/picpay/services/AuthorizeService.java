@@ -1,6 +1,7 @@
 package com.gustarodrigues.picpay.services;
 
 import com.gustarodrigues.picpay.clients.AuthorizeClient;
+import com.gustarodrigues.picpay.controllers.dtos.TransferDto;
 import com.gustarodrigues.picpay.entities.Transfer;
 import com.gustarodrigues.picpay.exceptions.PicPayException;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class AuthorizeService {
         this.authorizeClient = authorizeClient;
     }
 
-    public boolean isAuthorized(Transfer transfer) {
+    public boolean isAuthorized(TransferDto transfer) {
 
         var res = authorizeClient.isAuthorized();
 

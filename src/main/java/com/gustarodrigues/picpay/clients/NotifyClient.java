@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(url = "client.notify-service.url")
+@FeignClient(name = "NotifyClient", url = "${client.notify-service.url}")
 public interface NotifyClient {
 
     @PostMapping
